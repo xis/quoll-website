@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { RiArrowRightLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine } from "@remixicon/react";
 
 const team = [
-  { name: "Enes Furkan Olcay", role: "Founder / Engineering", avatar: "/avatars/enes.png", linkedin: "https://www.linkedin.com/in/enes-furkan-olcay/", x: "https://x.com/xis_xii", github: "https://github.com/xis" },
-  { name: "Ahmet Yunus Sevim", role: "Founder / Engineering", avatar: "/avatars/yunus.png", linkedin: "https://www.linkedin.com/in/ahmetyunussevim/", github: "https://github.com/yunussevim" },
+  { name: "Enes Furkan Olcay", role: "Founder / Product Engineer", avatar: "/avatars/enes.png", linkedin: "https://www.linkedin.com/in/enes-furkan-olcay/", x: "https://x.com/xis_xii", github: "https://github.com/xis" },
+  { name: "Ahmet Yunus Sevim", role: "Founder / Product", avatar: "/avatars/yunus.png", linkedin: "https://www.linkedin.com/in/ahmetyunussevim/", github: "https://github.com/yunussevim" },
   { name: "Recep Ahmet Kara", role: "Founder / Engineering", avatar: "/avatars/recep.png", linkedin: "https://www.linkedin.com/in/recep-ahmet-kara/", github: "https://github.com/2O77" },
   { name: "Sıla Yurtseven", role: "QA", avatar: "/avatars/sila.png", linkedin: "https://www.linkedin.com/in/s%C4%B1la-yurtseven-a0a241383/", github: "https://github.com/elloniser" },
 ];
