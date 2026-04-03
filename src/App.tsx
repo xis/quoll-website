@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { RiArrowRightLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine } from "@remixicon/react";
 
 const team = [
