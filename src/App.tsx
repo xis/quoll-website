@@ -117,8 +117,14 @@ function Footer() {
     <footer className="px-6 py-12">
       <div className="mx-auto flex max-w-5xl items-center justify-between font-mono text-xs">
         <span className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Quoll
+          &copy; {new Date().getFullYear()} Quoll LLC
         </span>
+        <a
+          href="mailto:hello@quollhq.com"
+          className="text-muted-foreground transition-colors hover:text-foreground"
+        >
+          hello@quollhq.com
+        </a>
       </div>
     </footer>
   );
