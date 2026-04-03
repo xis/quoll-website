@@ -59,63 +59,49 @@ function Showcase() {
 function Team() {
   return (
     <section id="team" className="px-6 py-24">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="font-mono text-sm uppercase tracking-widest text-muted-foreground">
+      <div className="mx-auto max-w-3xl">
+        <h2 className="text-center font-mono text-sm uppercase tracking-widest text-muted-foreground">
           Crew
         </h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-2 gap-10 sm:grid-cols-4">
           {team.map((member) => (
-            <div
-              key={member.name}
-              className="flex items-start gap-4 rounded-3xl bg-accent/10 border border-border/60 p-5"
-            >
-              {"avatar" in member && member.avatar ? (
-                <img
-                  src={member.avatar}
-                  alt={member.name}
-                  className="h-12 w-12 shrink-0 rounded-2xl object-cover"
-                />
-              ) : (
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-muted font-mono text-sm font-bold">
-                  {member.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
-              )}
-              <div className="font-mono">
-                <p className="text-sm font-semibold">{member.name}</p>
-                <p className="text-xs text-muted-foreground">{member.role}</p>
-                <div className="mt-1 flex gap-2">
+            <div key={member.name} className="flex flex-col items-center text-center">
+              <img
+                src={member.avatar}
+                alt={member.name}
+                className="h-24 w-24 rounded-3xl object-cover"
+              />
+              <p className="mt-4 font-mono text-sm font-semibold">{member.name}</p>
+              <p className="mt-1 font-mono text-xs text-muted-foreground">{member.role}</p>
+              <div className="mt-2 flex gap-3">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <RiLinkedinLine className="h-3.5 w-3.5" />
+                </a>
+                {"x" in member && member.x && (
                   <a
-                    href={member.linkedin}
+                    href={member.x}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    <RiLinkedinLine className="h-3.5 w-3.5" />
+                    <RiTwitterXLine className="h-3.5 w-3.5" />
                   </a>
-                  {"x" in member && member.x && (
-                    <a
-                      href={member.x}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      <RiTwitterXLine className="h-3.5 w-3.5" />
-                    </a>
-                  )}
-                  {"github" in member && member.github && (
-                    <a
-                      href={member.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      <RiGithubLine className="h-3.5 w-3.5" />
-                    </a>
-                  )}
-                </div>
+                )}
+                {"github" in member && member.github && (
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    <RiGithubLine className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
