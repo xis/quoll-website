@@ -116,9 +116,12 @@ function Footer() {
   return (
     <footer className="px-6 py-12">
       <div className="mx-auto flex max-w-5xl items-center justify-between text-base">
-        <span className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Quoll LLC
-        </span>
+        <div className="flex flex-col gap-1 text-muted-foreground">
+          <span>&copy; {new Date().getFullYear()} Quoll LLC</span>
+          <address className="text-sm not-italic">
+            8 The Green, Ste D, Dover, DE 19901, United States
+          </address>
+        </div>
         <a
           href="mailto:hello@quollhq.com"
           className="text-muted-foreground transition-colors hover:text-foreground"
